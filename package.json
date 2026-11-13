@@ -1,0 +1,22 @@
+{
+  "name": "frontend-automation",
+  "version": "1.0.0",
+  "description": "Suite de pruebas E2E para Sauce Demo con Playwright + Cucumber y Page Object Model",
+  "private": true,
+  "scripts": {
+    "test": "cucumber-js",
+    "test:headed": "cross-env HEADLESS=false cucumber-js",
+    "test:login": "cucumber-js --tags @login",
+    "test:cart": "cucumber-js --tags @cart",
+    "test:checkout": "cucumber-js --tags @checkout",
+    "test:demo": "cross-env HEADLESS=false SLOWMO=500 cucumber-js"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.0.0",
+    "cross-env": "^7.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.0"
+  }
+}
